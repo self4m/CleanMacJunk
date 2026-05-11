@@ -24,15 +24,21 @@ Mac 系统生成的冗余垃圾文件：
 
 ## 使用
 由于删除的元数据是 macOS 系统自身使用的文件，**强烈建议仅在 Windows 系统上使用**  
-1. 在[releases](https://github.com/self4m/clean-mac-junk/releases)中下载编译好的程序  
+1. 在[releases](https://github.com/self4m/CleanMacJunk/releases)中下载编译好的程序  
 2. 将工具放在**外部存储设备的根目录中**
 3. 双击运行，工具会自动清理当前目录 + 所有子目录中的 Mac 垃圾
 
 ## 构建
-安装 Go 环境后，克隆本项目并执行构建命令：
+### Windows 命令行构建（本机编译）
+安装 Go 环境后，克隆本项目并在项目根目录执行构建命令：
 ```bash
 go build -o CleanMacJunk.exe
 ```
-
-
+### 跨平台命令行构建（macOS / Linux 等系统）
+安装 Go 环境后，克隆本项目并在项目根目录执行交叉编译构建命令：
+```bash
+GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -o CleanMacJunk.exe
+```
+### Goland构建
+安装 GoLand 并配置好 Go 开发环境，打开项目后，点击右上角运行按钮即可自动编译构建。
 

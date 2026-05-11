@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CleanMacJunk" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="CleanMacJunk" />
+    <working_directory value="$PROJECT_DIR$" />
+    <envs>
+      <env name="GOOS" value="windows" />
+      <env name="GOARCH" value="amd64" />
+      <env name="CGO_ENABLED" value="0" />
+    </envs>
+    <kind value="PACKAGE" />
+    <package value="CleanMacJunk" />
+    <directory value="$PROJECT_DIR$" />
+    <output_directory value="." />
+    <option name="run" value="false" />
+    <method v="2" />
+  </configuration>
+</component>
