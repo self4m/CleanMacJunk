@@ -45,6 +45,10 @@ func main() {
 
 // cleanJunkDir 清理根目录下的垃圾文件夹
 func cleanJunkDir(junkDirName string) {
+	_, err := os.Stat(junkDirName)
+	if err != nil {
+		return
+	}
 	if err := os.RemoveAll(junkDirName); err != nil {
 		fmt.Printf("无法删除垃圾文件夹: %s - %v\n", junkDirName, err)
 	} else {
